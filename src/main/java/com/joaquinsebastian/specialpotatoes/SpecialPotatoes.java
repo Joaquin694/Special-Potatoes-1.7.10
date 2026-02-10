@@ -1,5 +1,9 @@
-package com.myname.mymodid;
+package com.joaquinsebastian.specialpotatoes;
 
+import cpw.mods.fml.relauncher.Side;
+import cpw.mods.fml.relauncher.SideOnly;
+import net.minecraft.creativetab.CreativeTabs;
+import net.minecraft.item.Item;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -10,13 +14,12 @@ import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.common.event.FMLServerStartingEvent;
 
-@Mod(modid = MyMod.MODID, version = Tags.VERSION, name = "MyMod", acceptedMinecraftVersions = "[1.7.10]")
-public class MyMod {
-
-    public static final String MODID = "mymodid";
+@Mod(modid = SpecialPotatoes.MODID, version = Tags.VERSION, name = "specialpotatoes", acceptedMinecraftVersions = "[1.7.10]")
+public class SpecialPotatoes {
+    public static final String MODID = "specialpotatoes";
     public static final Logger LOG = LogManager.getLogger(MODID);
 
-    @SidedProxy(clientSide = "com.myname.mymodid.ClientProxy", serverSide = "com.myname.mymodid.CommonProxy")
+    @SidedProxy(clientSide = "com.joaquinsebastian.specialpotatoes.ClientProxy", serverSide = "com.joaquinsebastian.specialpotatoes.CommonProxy")
     public static CommonProxy proxy;
 
     @Mod.EventHandler
@@ -43,4 +46,23 @@ public class MyMod {
     public void serverStarting(FMLServerStartingEvent event) {
         proxy.serverStarting(event);
     }
+
+    public static CreativeTabs tabSpecialPotatoes = new CreativeTabs("specialpotatoes") {
+        @Override
+        @SideOnly(Side.CLIENT)
+        public Item getTabIconItem() {
+            return CommonProxy.ironPotato;
+            /*
+            return CommonProxy.minerPotato;
+            return CommonProxy.bouncyPotato;
+            return  CommonProxy.creeperPotato;
+            return CommonProxy.kingPotato;
+            return CommonProxy.oceanPotato;
+             */
+
+        }
+    };
+
+
+
 }

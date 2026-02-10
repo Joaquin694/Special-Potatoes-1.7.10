@@ -1,8 +1,8 @@
-package com.myname.mymodid;
-
-import java.io.File;
+package com.joaquinsebastian.specialpotatoes;
 
 import net.minecraftforge.common.config.Configuration;
+
+import java.io.File;
 
 public class Config {
 
