@@ -1,9 +1,8 @@
 package com.joaquinsebastian.specialpotatoes;
 
-import cpw.mods.fml.relauncher.Side;
-import cpw.mods.fml.relauncher.SideOnly;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
+
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -13,13 +12,22 @@ import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.common.event.FMLServerStartingEvent;
+import cpw.mods.fml.relauncher.Side;
+import cpw.mods.fml.relauncher.SideOnly;
 
-@Mod(modid = SpecialPotatoes.MODID, version = Tags.VERSION, name = "specialpotatoes", acceptedMinecraftVersions = "[1.7.10]")
+@Mod(
+    modid = SpecialPotatoes.MODID,
+    version = Tags.VERSION,
+    name = "specialpotatoes",
+    acceptedMinecraftVersions = "[1.7.10]")
 public class SpecialPotatoes {
+
     public static final String MODID = "specialpotatoes";
     public static final Logger LOG = LogManager.getLogger(MODID);
 
-    @SidedProxy(clientSide = "com.joaquinsebastian.specialpotatoes.ClientProxy", serverSide = "com.joaquinsebastian.specialpotatoes.CommonProxy")
+    @SidedProxy(
+        clientSide = "com.joaquinsebastian.specialpotatoes.ClientProxy",
+        serverSide = "com.joaquinsebastian.specialpotatoes.CommonProxy")
     public static CommonProxy proxy;
 
     @Mod.EventHandler
@@ -48,21 +56,20 @@ public class SpecialPotatoes {
     }
 
     public static CreativeTabs tabSpecialPotatoes = new CreativeTabs("specialpotatoes") {
+
         @Override
         @SideOnly(Side.CLIENT)
         public Item getTabIconItem() {
             return CommonProxy.ironPotato;
             /*
-            return CommonProxy.minerPotato;
-            return CommonProxy.bouncyPotato;
-            return  CommonProxy.creeperPotato;
-            return CommonProxy.kingPotato;
-            return CommonProxy.oceanPotato;
+             * return CommonProxy.minerPotato;
+             * return CommonProxy.bouncyPotato;
+             * return CommonProxy.creeperPotato;
+             * return CommonProxy.kingPotato;
+             * return CommonProxy.oceanPotato;
              */
 
         }
     };
-
-
 
 }

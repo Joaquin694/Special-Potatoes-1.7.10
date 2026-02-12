@@ -1,13 +1,13 @@
 package com.joaquinsebastian.specialpotatoes.items;
 
-import com.joaquinsebastian.specialpotatoes.SpecialPotatoes;
-import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemFood;
 import net.minecraft.item.ItemStack;
 import net.minecraft.potion.Potion;
 import net.minecraft.potion.PotionEffect;
 import net.minecraft.world.World;
+
+import com.joaquinsebastian.specialpotatoes.SpecialPotatoes;
 
 public class MinerPotato extends ItemFood {
 
@@ -31,6 +31,5 @@ public class MinerPotato extends ItemFood {
 
         super.onFoodEaten(stack, world, player);
     }
-
 
 }

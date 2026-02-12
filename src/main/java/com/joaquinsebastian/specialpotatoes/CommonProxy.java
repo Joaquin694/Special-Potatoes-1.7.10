@@ -1,13 +1,13 @@
 package com.joaquinsebastian.specialpotatoes;
 
-
 import com.joaquinsebastian.specialpotatoes.items.*;
+import net.minecraft.item.Item;
+
 import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.common.event.FMLServerStartingEvent;
 import cpw.mods.fml.common.registry.GameRegistry;
-import net.minecraft.item.Item;
 
 public class CommonProxy {
 
@@ -17,6 +17,7 @@ public class CommonProxy {
     public static Item oceanPotato;
     public static Item kingPotato;
     public static Item minerPotato;
+    public static Item firePotato;
 
     // preInit "Run before anything else. Read your config, create blocks, items, etc, and register them with the
     // GameRegistry." (Remove if not needed)
@@ -29,6 +30,7 @@ public class CommonProxy {
         creeperPotato = new ItemCreeperPotato();
         oceanPotato = new ItemOceanPotato();
         kingPotato = new ItemKingPotato();
+        firePotato = new FirePotato();
 
         // Registrar
         GameRegistry.registerItem(bouncyPotato, "bouncy_potato");
@@ -37,6 +39,7 @@ public class CommonProxy {
         GameRegistry.registerItem(oceanPotato, "ocean_potato");
         GameRegistry.registerItem(kingPotato, "king_potato");
         GameRegistry.registerItem(minerPotato, "miner_potato");
+        GameRegistry.registerItem(firePotato, "fire_potato");
     }
 
     // load "Do your mod setup. Build whatever data structures you care about. Register recipes." (Remove if not needed)

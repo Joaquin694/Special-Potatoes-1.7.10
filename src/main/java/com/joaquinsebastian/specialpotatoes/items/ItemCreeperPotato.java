@@ -1,6 +1,5 @@
 package com.joaquinsebastian.specialpotatoes.items;
 
-import com.joaquinsebastian.specialpotatoes.SpecialPotatoes;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.EnumRarity;
 import net.minecraft.item.ItemFood;
@@ -9,7 +8,10 @@ import net.minecraft.potion.Potion;
 import net.minecraft.potion.PotionEffect;
 import net.minecraft.world.World;
 
+import com.joaquinsebastian.specialpotatoes.SpecialPotatoes;
+
 public class ItemCreeperPotato extends ItemFood {
+
     public ItemCreeperPotato() {
         super(1, 0.0F, false);
         this.setUnlocalizedName("creeper_potato");

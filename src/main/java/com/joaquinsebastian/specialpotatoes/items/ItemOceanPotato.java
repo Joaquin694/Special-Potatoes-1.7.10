@@ -1,6 +1,5 @@
 package com.joaquinsebastian.specialpotatoes.items;
 
-import com.joaquinsebastian.specialpotatoes.SpecialPotatoes;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemFood;
 import net.minecraft.item.ItemStack;
@@ -8,7 +7,10 @@ import net.minecraft.potion.Potion;
 import net.minecraft.potion.PotionEffect;
 import net.minecraft.world.World;
 
+import com.joaquinsebastian.specialpotatoes.SpecialPotatoes;
+
 public class ItemOceanPotato extends ItemFood {
+
     public ItemOceanPotato() {
         super(5, 0.6F, false);
         this.setUnlocalizedName("ocean_potato");

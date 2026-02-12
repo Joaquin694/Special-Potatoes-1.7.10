@@ -6,7 +6,7 @@
 		"description": "Special Potatoes",
 		"version": "${modVersion}",
 		"mcversion": "${minecraftVersion}",
-		"url": "",
+		"url": "https://github.com/Joaquin694/Special-Potatoes-1.7.10",
 		"updateUrl": "",
 		"authorList": ["Joaquin Sebastian"],
 		"credits": "",
