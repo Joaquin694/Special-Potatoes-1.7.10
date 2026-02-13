@@ -1,7 +1,15 @@
 package com.joaquinsebastian.specialpotatoes;
 
-import com.joaquinsebastian.specialpotatoes.items.*;
 import net.minecraft.item.Item;
+
+import com.joaquinsebastian.specialpotatoes.items.CraftingRegistry;
+import com.joaquinsebastian.specialpotatoes.items.FirePotato;
+import com.joaquinsebastian.specialpotatoes.items.ItemBouncyPotato;
+import com.joaquinsebastian.specialpotatoes.items.ItemCreeperPotato;
+import com.joaquinsebastian.specialpotatoes.items.ItemIronPotato;
+import com.joaquinsebastian.specialpotatoes.items.ItemKingPotato;
+import com.joaquinsebastian.specialpotatoes.items.ItemOceanPotato;
+import com.joaquinsebastian.specialpotatoes.items.MinerPotato;
 
 import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;

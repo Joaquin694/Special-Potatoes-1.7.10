@@ -15,11 +15,7 @@ import cpw.mods.fml.common.event.FMLServerStartingEvent;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
-@Mod(
-    modid = SpecialPotatoes.MODID,
-    version = Tags.VERSION,
-    name = "specialpotatoes",
-    acceptedMinecraftVersions = "[1.7.10]")
+@Mod(modid = SpecialPotatoes.MODID, version = "0.2", name = "specialpotatoes", acceptedMinecraftVersions = "[1.7.10]")
 public class SpecialPotatoes {
 
     public static final String MODID = "specialpotatoes";

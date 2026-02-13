@@ -1,6 +1,5 @@
 package com.joaquinsebastian.specialpotatoes.items;
 
-import net.minecraft.block.Block;
 import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
 import net.minecraft.item.ItemStack;
@@ -50,14 +49,6 @@ public class CraftingRegistry {
         // --- 7. FIRE POTATO
         GameRegistry.addRecipe(
             new ItemStack(CommonProxy.firePotato, 1),
-            new Object[] {
-                " C ",
-                "BPB",
-                " C ",
-                'P', Items.baked_potato,
-                'C', Items.quartz,
-                'B', Blocks.netherrack
-            }
-        );
+            new Object[] { " C ", "BPB", " C ", 'P', Items.baked_potato, 'C', Items.quartz, 'B', Blocks.netherrack });
     }
 }
